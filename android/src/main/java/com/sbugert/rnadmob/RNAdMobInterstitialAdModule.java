@@ -2,7 +2,6 @@ package com.sbugert.rnadmob;
 
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.Nullable;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
@@ -106,7 +105,7 @@ public class RNAdMobInterstitialAdModule extends ReactContextBaseJavaModule {
             }
         });
     }
-    private void sendEvent(String eventName, @Nullable WritableMap params) {
+    private void sendEvent(String eventName,  WritableMap params) {
         getReactApplicationContext().getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
     }
 
